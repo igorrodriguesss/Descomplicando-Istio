@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+    backend:
+        build: ./backend
+        image: igor/backend:latest
+        ports:
+            - "5000:5000"
+        networks:
+            - appnet
+
+    frontend:
+        build: ./frontend
+        image: igor/frontend:latest
+        ports:
+            - "8080:8080"
+        depends_on:
+            - backend
+        networks:
+            - appnet
+
+networks:
+    appnet:

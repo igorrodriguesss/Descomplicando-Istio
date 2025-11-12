@@ -25,6 +25,8 @@ O **Istio** é uma das service meshes mais populares e robustas do ecossistema c
 
 ## Como o Istio funciona?
 
+![Arquitetura do Istio](images/istio.png)
+
 1. **Sidecar Proxy**: o Istio injeta um proxy Envoy ao lado de cada serviço.
 2. **Control Plane**: gerencia os proxies e aplica políticas.
 3. **Data Plane**: os proxies formam o plano de dados por onde o tráfego passa.
